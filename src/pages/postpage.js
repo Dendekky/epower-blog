@@ -22,7 +22,7 @@ export default class PostView extends React.Component {
             <div className='posts'>
               {posts.map(post => <div key={post.id}>
                 <img alt="post" src={post.featured_image_thumbnail}/>
-                <Link to={`/${post.id}`}><p>{post.title.rendered}</p></Link>
+                <Link to={`/${post.slug}`}><p>{post.title.rendered}</p></Link>
                 <p>{post.slug}</p>
               </div>)}
             </div>

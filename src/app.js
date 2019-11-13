@@ -5,7 +5,7 @@ import PostView from './pages/postpage';
 
 const App = () => <Router>
 <div>
-<Route path='/:id' component={SinglePage}></Route>
+<Route path='/:slug' component={SinglePage}></Route>
 <Route exact path='/' component={PostView}></Route>
 </div>
 </Router>;
