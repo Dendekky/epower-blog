@@ -41,3 +41,32 @@ body{
     justify-content: center;
     margin: 0 20px 0 20px;
 }
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    span{
+        text-decoration: none;
+        margin: 0 10px 0 10px;
+        background-color: rgba($color: #1970d310, $alpha: 1.0);
+        color: white;
+        padding: 1em 1.5em;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 50px 50px 50px 50px;
+      }
+
+    a{
+        text-decoration: none;
+        margin: 0 10px 0 10px;
+        background-color: rgba($color: #1970d310, $alpha: 1.0);
+        color: white;
+        padding: 1em 1.5em;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 50px 50px 50px 50px;
+      }
+      
+}
