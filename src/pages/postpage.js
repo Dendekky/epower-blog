@@ -19,12 +19,17 @@ export default class PostView extends React.Component {
         const { posts } = this.state;
 
         return (
-            <div className='posts'>
+            <div>
+              <div className='header'>
+                <h1>Epower Blog</h1>
+              </div>
+              <div className='posts'>
               {posts.map(post => <div key={post.id}>
-                <img alt="post" src={post.featured_image_thumbnail}/>
-                <Link to={`/${post.slug}`}><p>{post.title.rendered}</p></Link>
-                <p>{post.slug}</p>
+                <img alt="post" src={post.featured_image}/>
+                <Link className="link" to={`/${post.slug}`}><p>{post.title.rendered}</p></Link>
+                <p>{post.excerpt.rendered}</p>
               </div>)}
+              </div>
             </div>
         );
       }

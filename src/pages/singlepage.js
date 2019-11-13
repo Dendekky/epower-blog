@@ -25,10 +25,14 @@ export default class SinglePage extends React.Component {
           }
 
         return (
-            <div className='singlepage'>
-                    <p>{details[0].title.rendered}</p>
+            <div>
+              <div className='header'>
+                <h1>{details[0].title.rendered}</h1>
+              </div>
+              <div className='singlepage'>
                     <img alt="post" src={details[0].featured_image}/>
                     <div dangerouslySetInnerHTML={{ __html: details[0].content.rendered }} />
+              </div>
             </div>
         );
       }
