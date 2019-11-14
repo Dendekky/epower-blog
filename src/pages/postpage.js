@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Loader from 'react-loader-spinner';
 
 export default class PostView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             posts: [],
+            isLoading: true,
             currentPage: 1,
             postsPerPage: 6,
             upperPageBound: 6,
@@ -65,11 +67,11 @@ export default class PostView extends React.Component {
     componentDidMount () {
         fetch('https://epower.ng/wp-json/wp/v2/posts')
         .then(res => res.json())
-        .then(data => this.setState({ posts: data }))
+        .then(data => this.setState({ posts: data, isLoading: false }))
     }
 
     render() {
-        const { posts, currentPage, postsPerPage, isPrevBtnActive, isNextBtnActive } = this.state;
+        const { posts, isLoading, currentPage, postsPerPage, isPrevBtnActive, isNextBtnActive } = this.state;
 
         // Logic for displaying current posts
         const indexOfLastpost = currentPage * postsPerPage;
@@ -95,6 +97,17 @@ export default class PostView extends React.Component {
         }
         else{
             renderNextBtn = <div className={isNextBtnActive}><a href='#' id="btnNext" onClick={this.btnNextClick}> Next </a></div>
+        }
+
+        if (isLoading) {
+          return <Loader
+          className='loader'
+          type="Puff"
+          color="#00BFFF"
+          height={120}
+          width={120}
+          timeout={10000}
+       />;
         }
 
         return (

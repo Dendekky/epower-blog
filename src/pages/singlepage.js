@@ -1,4 +1,5 @@
 import React from 'react';
+import Loader from 'react-loader-spinner';
 
 export default class SinglePage extends React.Component {
     constructor(props) {
@@ -34,7 +35,14 @@ export default class SinglePage extends React.Component {
         month[11] = "December";
 
         if (isLoading) {
-            return <p>loading...</p>;
+            return <Loader
+            className='loader'
+            type="Puff"
+            color="#00BFFF"
+            height={120}
+            width={120}
+            timeout={10000}
+         />;
           }
 
         return (
