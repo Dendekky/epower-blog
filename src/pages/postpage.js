@@ -109,6 +109,10 @@ export default class PostView extends React.Component {
               {renderPrevBtn}
               {renderNextBtn}
               </div>
+              <div className='header'>
+                <h1>Copyright 2019</h1>
+              </div>;
+
             </div>
         );
       }

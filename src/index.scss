@@ -1,12 +1,18 @@
+$header-color: rgb(25, 140, 175);
+
 body{
     font-size: 20px;
+    margin: 0px;
 }
 
 .header {
     text-align: center;
-    background-color: rgba($color: #1970d310, $alpha: 1.0);
+    background-color: $header-color;
     color: white;
-    padding: 30px;
+    padding: 80px;
+    span {
+        text-transform: uppercase;
+    }
 }
 
 .posts {
@@ -47,23 +53,12 @@ body{
     align-items: center;
     justify-content: center;
     padding: 20px;
-    span{
+    span, a {
         text-decoration: none;
         margin: 0 10px 0 10px;
-        background-color: rgba($color: #1970d310, $alpha: 1.0);
+        background-color: $header-color;
         color: white;
-        padding: 1em 1.5em;
-        text-decoration: none;
-        text-transform: uppercase;
-        border-radius: 50px 50px 50px 50px;
-      }
-
-    a{
-        text-decoration: none;
-        margin: 0 10px 0 10px;
-        background-color: rgba($color: #1970d310, $alpha: 1.0);
-        color: white;
-        padding: 1em 1.5em;
+        padding: 1em 2.5em;
         text-decoration: none;
         text-transform: uppercase;
         border-radius: 50px 50px 50px 50px;
