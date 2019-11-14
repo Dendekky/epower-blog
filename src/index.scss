@@ -1,0 +1,73 @@
+$header-color: rgb(25, 140, 175);
+
+body{
+    font-size: 20px;
+    margin: 0px;
+}
+
+.header {
+    text-align: center;
+    background-color: $header-color;
+    color: white;
+    padding: 80px;
+    span {
+        text-transform: uppercase;
+    }
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    div {
+        background-color: #d1d0d0;
+        margin: 15px;
+        height: 550px;
+        width: 350px;
+        text-align: center;
+        border-radius: 2%;
+        box-shadow: 5px 10px 8px #888888;
+        img {
+        width: 350px;
+        height: 230px;
+        position: relative;
+        }
+        .link {
+        text-decoration: none;
+        text-align: center;
+    }
+    }
+}
+
+.singlepage {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px 0 20px;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    span, a {
+        text-decoration: none;
+        margin: 0 10px 0 10px;
+        background-color: $header-color;
+        color: white;
+        padding: 1em 2.5em;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 50px 50px 50px 50px;
+      } 
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
