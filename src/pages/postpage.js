@@ -81,7 +81,7 @@ export default class PostView extends React.Component {
         const renderposts = currentposts.map(post => <div key={post.id}>
           <Link className="link" to={`/${post.slug}`}>
           <img alt="post" src={post.featured_image}/>
-          <p>{post.title.rendered}</p>
+          <h2>{post.title.rendered}</h2>
           <p>{post.excerpt.rendered}</p>
           </Link>
         </div>)
