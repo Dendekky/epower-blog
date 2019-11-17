@@ -79,9 +79,10 @@ export default class PostView extends React.Component {
         const currentposts = posts.slice(indexOfFirstpost, indexOfLastpost);
 
         const renderposts = currentposts.map(post => <div key={post.id}>
+          <Link className="link" to={`/${post.slug}`}><p>{post.title.rendered}</p>
           <img alt="post" src={post.featured_image}/>
-          <Link className="link" to={`/${post.slug}`}><p>{post.title.rendered}</p></Link>
           <p>{post.excerpt.rendered}</p>
+          </Link>
         </div>)
 
         let renderPrevBtn = null;
