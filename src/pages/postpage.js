@@ -82,7 +82,7 @@ export default class PostView extends React.Component {
           <Link className="link" to={`/${post.slug}`}>
           <img alt="post" src={post.featured_image}/>
           <p>{post.title.rendered}</p>
-          <p>{post.excerpt.rendered}</p>
+          <p dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}>}</p>
           </Link>
         </div>)
 
